@@ -1,2 +1,6 @@
-# Twenty_Questions
-스무고개 프로젝트
+#installation
+
+    npm i
+    node index
+
+localhost:3000 으로 접속
