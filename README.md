@@ -1,4 +1,4 @@
-#installation
+## installation
 
     npm i
     node index
