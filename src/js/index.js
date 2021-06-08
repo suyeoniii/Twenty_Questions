@@ -121,10 +121,10 @@ function drawAnswerMessage(data){
   var message = document.createElement('span');
   var name = document.createElement('span');
 
-
   if(data.message == answer ){
     name.innerText = data.name;
     message.innerText = '이 승리자였습니다. 새로운 게임을 진행해주세요.';
+
     alert(data.name +"님이 정답을 맞추어서 승리하셨습니다.\n 정답은 '" + data.message+"' 이였습니다.");
     chatWindow.innerText = '';
     chatWindow2.innerText = '';

@@ -1,5 +1,6 @@
 body{
     background-color: white;
+    padding-bottom: 100px;
 }
 .flex_container {
     display: flex;
@@ -130,3 +131,15 @@ img{
 .chat_wrap2 .input-div > textarea { width: 100%; height: 80px; border: none; padding: 10px; }
 
 .format { display: none; }
+
+ol{
+    padding-left: 20px;
+}
+.answerinput{
+    margin-top: 20px;
+
+}
+.white, .white a {
+
+    color: #fff;
+  }
