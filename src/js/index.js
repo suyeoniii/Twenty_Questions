@@ -189,3 +189,4 @@ function drawChatMessage(data){
 
     return wrap;
 }
+

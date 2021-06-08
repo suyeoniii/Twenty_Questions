@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta http-equiv="X-UA-Compatible" content="ie=edge">
        <link rel="stylesheet" href="./css/index.css">
        <link rel="stylesheet" href="./css/main.css">
-       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
+       <link rel="stylesheet"
+             href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
 
        <!-- 부트스트랩 -->
       <link href="css/bootstrap.min.css" rel="stylesheet">
 
        <title>chat-app</title>
 </head>
+
+
 <body>
   <div class="page-header">
-  <h1>🌟 스무고개 🌟<small></small></h1>
+  <h1 style="font-family: DX앙상블">스무고개<small></small></h1>
   </div>
   <div class="flex_container">
-  <div class="alert alert-info flex_left" role="alert">rule</div>
+
+    <div class="alert alert-info flex_left" role="alert">
+      <div class="header">rule</div>
+
+    <div class="content">
+      <ol>
+        <li>가장 먼저 입장한 사람이 출제자가 되고, 나머지 사람들은 질문자가 된다.</li>
+        <li>출제가가 정답을 입력하고 난 후, 나머지 참여자들이 질문을 한다.</li>
+        <li>질문은 참여자들 모두 합쳐서 20번까지 가능하다.</li>
+        <li>출제자는 질문에 대해 YES or NO로 대답한다.</li>
+        <li>질문자들이 질문 기회 20번 안에 제시어를 맞춘다면 맞춘 사람은 승리하고,
+          20번 안에 맞추지 못한다면 출제자가 승리한다.</li>
+      </ol>
+    </div>
+
+    </div>
+
+
+
   <div class="flex_right">
     <div class="chat_group">
     <div class="chat">
@@ -26,63 +48,93 @@
     <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
     <span id="info">공지</span>
   </div>
-  <div>정답창
-    <div id="chatWindow" class="chatBox"></div>
-    <div class="input-group">
-      <input id="chatInput" class="form-control" type="text" autofocus placeholder="정답을 입력해주세요." aria-label="Amount (to the nearest dollar)">
-      <span class="input-group-btn">
-        <button id="chatMessageSendBtn" class="btn btn-default">전송</button></span>
-    </div>
-  </div>
+
+
+      <div class="chat_wrap">
+        <div class = "header">정답창
+          <div id="chatWindow" class="chatBox"></div>
+
+          <div class="input-group">
+            <input id="chatInput" class="form-control" type="text"
+                   autofocus placeholder="정답을 입력해주세요."
+                   aria-label="Amount (to the nearest dollar)">
+
+            <span class="input-group-btn">
+              <button id="chatMessageSendBtn" class="btn btn-default">전송</button>
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+
 </div>
+
 <div class="chat">
   <div class="info">
     <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
     <span id="info2">공지</span>
   </div>
-  <div>채팅창
+
+
+  <div class="chat_wrap2">
+  <div class="header">채팅창
     <div id="chatWindow2" class="chatBox"></div>
     <div class="input-group">
-      <input id="chatInput2" type="text" class="form-control" autofocus placeholder="대화를 입력해주세요.">
+      <input id="chatInput2" type="text" class="form-control"
+             autofocus placeholder="대화를 입력해주세요.">
       <span class="input-group-btn">
       <button id="chatMessageSendBtn2" class="btn btn-default">전송</button>
       </span>
     </div>
   </div>
-</div>
+  </div></div>
 </div>
 
+
+
   <div id="attendance" class="app_attendance">출제자
-    <p id = "score">0점</p>
+
     <div id = "examiner"></div>
-    <img src="/라이언1.png"/>
+    <p id = "score">0점</p>
+    <img src="/네오.gif"/>
   </div>
   <div id="attendance" class="app_attendance">참여1
-    <p id = "score">0점</p>
     <div id = "player1"></div>
+    <p id = "score">0점</p>
     <img src="/어피치.jpeg"/>
   </div>
   <div id="attendance" class="app_attendance">참여2
-    <p id = "score">0점</p>
     <div id = "player2"></div>
+    <p id = "score">0점</p>
     <img src="/무지.png"/>
   </div>
   <div id="attendance" class="app_attendance">참여3
-    <p id = "score">0점</p>
     <div id = "player3"></div>
+    <p id = "score">0점</p>
     <img src="/네오2.png"/>
   </div>
   <div id="attendance" class="app_attendance">참여4
-    <p id = "score">0점</p>s
     <div id = "player4"></div>
+    <p id = "score">0점</p>
     <img src="/프로도.png"/>
   </div>
 
-  <div>
-    <input id="answerinput" type="text" class="app__input" autofocus placeholder="정답을 입력해주세요.">
+
+
+
+  <div class ="ansinp">
+    <input id="answerinput" type="text" class="app__input"
+           autofocus placeholder="정답을 입력해주세요."
+           >
     <button id="answerbutton" class="app__button">입력</button>
   </div>
+
+
 </div>
+
+
+
 </div>
 
 <script src="/socket.io/socket.io.js"></script>
